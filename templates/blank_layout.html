@@ -1,0 +1,67 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAFA CART</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    
+    <div class="header">
+        <div class="container">
+            {% include 'menu.html' %}
+            {% block banner %}
+                
+            {% endblock banner %} 
+        </div>
+    </div> 
+
+    <!-- Feadtued Categories -->
+    {% block content %}
+        
+    {% endblock content %} 
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-2">
+                    <img src="{% static 'images///new_logo_white.png'%}">
+                    <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.
+                </div>
+            </div>
+            <div class="row">
+                <a href="https://www.linkedin.com/in/muhammed-fayis-p-596499214/"><h4>Linkedin</h4></a><a href="https://www.instagram.com/mhd.faaizz?igsh=MzRlODBiNWFlZA=="><h4>Instagram</h4></a><a href="https://github.com/mhdfaaiz"><h4>Github</h4></a>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2024 - Muhammed Faaiz</p>
+        </div>
+    </div>
+
+    <!-- javascript -->
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px"
+            }
+            else {
+                MenuItems.style.maxHeight = "0px"
+            }
+        }
+    </script>
+    {%block extra_scripts%}
+
+    {%endblock %}
+
+</body>
+
+</html>
