@@ -7,7 +7,6 @@ class Customer(models.Model):
     DELETE=0
     DELETE_CHOICES=((LIVE,'Live'),(DELETE,'Delete'))
     name=models.CharField(max_length=200)
-    address=models.TextField()
     User=models.OneToOneField(User,on_delete=models.CASCADE,related_name='customer_profile')
     phone=models.CharField(max_length=10)
     delete_status=models.IntegerField(choices=DELETE_CHOICES,default=LIVE)
