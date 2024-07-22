@@ -22,15 +22,17 @@
         Indicator.style.transform = "translate(0px)";
 
     }
-    function validateForm() {
-    let x = document.forms["RegForm"]["password"].value;
-    let y = document.forms["RegForm"]["repassword"].value;
-    if (x != y) {
-        alert("password mismatch");
-        return false;
-    }
-    }
+
 </script>
+{% if register %}
+    <script>
+        register()
+    </script>
+    {% else %}
+    <script>
+        login()
+    </script>
+{% endif %}
 {% endblock %} 
 
 {% endblock %}

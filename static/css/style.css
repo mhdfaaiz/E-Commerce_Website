@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+P{
+    color:red;
+}
 .pics{
         float: left;
         width:  600px;
@@ -402,6 +405,22 @@ th:last-child{
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     border-radius: 20px;
+}
+.message-container{
+    
+    width: 300px;
+    height: fit-content;
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    margin: auto;
+    overflow: hidden;
+}
+.error{
+    color:red;
+}
+.success{
+    color:green;
 }
 .form-container span{
     font-weight: bold;
