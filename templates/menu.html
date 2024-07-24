@@ -1,18 +1,19 @@
 {% load static %}
 <div class="navbar">
     <div class="logo">
-        <a href="index.html"><img src="{% static 'images///new_logo.png'%}" alt="logo" width="125px"></a>
+        <a href="index.html"><img src="{% static 'images///new_logo_white.png'%}" alt="logo" width="125px"></a>
     </div>
     <nav>
         <ul id="MenuItems">
-            <li><a href="{% url 'index' %}">Home</a></li>
-            <li><a href="{% url 'list_products' %}">Products</a></li>
+            <li><a href="{% url 'index' %}" class="top">Home</a></li>
+            <li><a href="{% url 'list_products' %}" class="top">Products</a></li>
 
             {% if not user.is_authenticated %}
-            <li><a href="{% url 'account' %}">Account</a></li>
+            <li><a href="{% url 'account' %}" class="top">Account</a></li>
             {% endif %}
             {% if user.is_authenticated %}
-            <li><a href="{% url 'logout' %}">Logout</a></li>
+            <li><a href="{% url 'orders' %}" class="top">Orders</a></li>
+            <li><a href="{% url 'logout' %}" class="top">Logout</a></li>
             {% endif %}
         </ul>
     </nav>

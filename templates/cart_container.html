@@ -16,10 +16,10 @@
                 <div class="cart-info">
                     <img src="{{ cart_item.product.image.url }}">
                     <div>
-                        <p>{{ cart_item.product.title }}</p>
-                        <small>Price: ${{ cart_item.product.price }}</small>
+                        <p class="desc">{{ cart_item.product.title }}</p>
+                        <small class="desc">Price: ${{ cart_item.product.price }}</small>
                         <br>
-                        <a href="{% url 'remove_item' cart_item.id%}">Remove</a>
+                        <a class="desc" href="{% url 'remove_item' cart_item.id%}">Remove</a>
                     </div>
                 </div>
             </td>
@@ -39,7 +39,7 @@
                 <td colspan='2'></td>
                 <td>
                     <form method="post" action="{% url 'checkout' %}" enctype = "multipart/form-data">
-a                       {% csrf_token %}
+                       {% csrf_token %}
                         <input type="hidden" name="total" value="{% total cart %}" >
                         <button class="btn" type="submit">Confirm Order</button>
                     </form>    
@@ -48,6 +48,6 @@ a                       {% csrf_token %}
         </tbody></table>
     </div>
     {% else %}
-    <p>Cart is empty</p>
+    <p class="desc">"Your cart is currently empty. Start adding items to it to proceed with your purchase."</p>
     {% endif %}
 </div>

@@ -3,8 +3,48 @@
     padding: 0;
     box-sizing: border-box;
 }
+.offr{
+    font-style: italic;
+    font-size: 28px;
+    font-family: sans-serif;
+    color: lightgoldenrodyellow;
+}
+.off{
+    font-size: 60px;
+    font-family: fantasy;
+    font-style: italic;
+    color: chocolate;
+}
+
+.desc{
+    color:black;
+}
+.top{
+    color:white;
+}
+.form_button{
+    width: 250px;
+    border: 0;
+    display: inline-block;
+    background: #5e0b0b;
+    color: white;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+.form_button:hover{
+    background: #1f0202;
+}
+
+.number{
+    color: #1a1717;
+}
+.price{
+    color:#1a1717;
+}
 P{
-    color:red;
+    color: #cba5a5;
 }
 .pics{
         float: left;
@@ -38,10 +78,10 @@ nav ul li{
 }
 a{
     text-decoration: none;
-    color: #555;
+    color: #cba5a5;
 }
 p{
-    color: #555;
+    color: #cba5a5;
 }
 .container{
     max-width: 1300px;
@@ -64,24 +104,24 @@ p{
     padding: 50px 0;
 }
 .col-2 h1{
-    font-size: 50px;
+    font-size: 48px;
     line-height: 60px;
     margin: 25px 0;
 }
 .btn{
     display: inline-block;
-    background: #ff523b;
-    color: white;
+    background: #cba5a5;
+    color: black;
     padding: 8px 30px;
     margin: 30px 0;
     border-radius: 30px;
     transition: background 0.5s;
 }
 .btn:hover{
-    background: #563434;
+    background: #755959;
 }
 .header{
-    background: radial-gradient(#fff,#377cb1);
+    background: radial-gradient(#5e0b0b, #1a1717);
 }
 .header .row{
     margin-top: 70px;
@@ -118,11 +158,11 @@ p{
     margin: 0 auto 80px;
     position: relative;
     line-height: 60px;
-    color: #555;
+    color: black;
 }
 .title::after{
     content: '';
-    background: #ff523b;
+    background: #5e0b0b;
     width: 80px;
     height: 5px;
     border-radius: 5px;
@@ -132,21 +172,21 @@ p{
     transform: translateX(-50%);
 }
 h4{
-    color: #555;
+    color: black;
     font-weight: normal;
 }
 .col-4 p{
     font-size: 14px;
 }
 .rating .fa{
-    color: #ff523b;
+    color: #5e0b0b;
 }
 .col-4:hover{
     transform: translateY(-5px);
 }
 /* Offer */
 .offer{
-    background: radial-gradient(#fff, #377cb1);
+    background: radial-gradient(#5e0b0b, #1a1717);
     margin-top: 80px;
     padding: 30px 0;
 }
@@ -154,7 +194,7 @@ h4{
     padding: 50px;
 }
 small{
-    color: #555;
+    color: #cba5a5;
 }
 
 /* Testimonial */
@@ -178,7 +218,7 @@ small{
 }
 .fa.fa-quote-left{
     font-size: 34px;
-    color: #ff523b;
+    color: #5e0b0b;
 }
 .col-3 p{
     font-size: 12px;
@@ -210,7 +250,7 @@ small{
     background: black;
     color: #8a8a8a;
     font-size: 14px;
-    padding: 60px 0 20px;
+    padding: 30px 0 10px;
 }
 .footer p{
     color: #8a8a8a;
@@ -268,7 +308,7 @@ ul{
     margin: 100px auto 50px;
 }
 select{
-    border: 1px solid #ff523b;
+    border: 1px solid #5e0b0b;
     padding: 5px;
 }
 select:focus{
@@ -279,7 +319,7 @@ select:focus{
 }
 .page-btn span{
     display: inline-block;
-    border: 1px solid #ff523b;
+    border: 1px solid #5e0b0b;
     margin-left: 10px;
     width: 40px;
     height: 40px;
@@ -288,7 +328,7 @@ select:focus{
     cursor: pointer;
 }
 .page-btn span:hover{
-    background: #ff523b;
+    background: #5e0b0b;
     color: white;
 }
 
@@ -318,14 +358,14 @@ select:focus{
     padding-left: 10px;
     font-size: 20px;
     margin-left: 10px;
-    border: 1px solid #ff523b;
+    border: 1px solid #5e0b0b;
     margin-right: 10px;
 }
 input:focus{
     outline: none;
 }
 .single-product .fa{
-    color: #ff523b;
+    color: #5e0b0b;
     margin-left: 10px;
 }
 .small-img-row{
@@ -353,7 +393,7 @@ th{
     text-align: left;
     padding: 5px;
     color: #fff;
-    background: #ff523b;
+    background: #5e0b0b;
     font-weight: normal;
 }
 td{
@@ -365,7 +405,7 @@ td input{
     padding: 5px;
 }
 td a{
-    color: #ff523b;
+    color: #5e0b0b;
     font-size: 12px;
 }
 td img{
@@ -378,7 +418,7 @@ td img{
     justify-content: flex-end;
 }
 .total-price table{
-    border-top: 3px solid #ff523b;
+    border-top: 3px solid #5e0b0b;
     width: 100%;
     max-width: 400px;
 }
@@ -405,6 +445,8 @@ th:last-child{
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     border-radius: 20px;
+    margin-bottom: 20px;
+
 }
 .message-container{
     
@@ -425,7 +467,7 @@ th:last-child{
 .form-container span{
     font-weight: bold;
     padding: 0 10px;
-    color: #555;
+    color:black;
     cursor: pointer;
     width: 100px;
     display: inline-block;
@@ -468,7 +510,7 @@ form a{
 #Indicator{
     width: 100px;
     border: none;
-    background: #ff523b;
+    background: #5e0b0b;
     height: 3px;
     margin-top: 8px;
     transform: translateX(100px);

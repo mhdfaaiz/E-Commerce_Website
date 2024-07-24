@@ -1,19 +1,4 @@
 {% load static %}
-<div class="categories">
-    <div class="small-container">
-        <div class="row">
-            <div class="col-3">
-                <img src="{% static 'images////category-1.jpg'%}">
-            </div>
-            <div class="col-3">
-                <img src="{% static 'images////category-2.jpg'%}">
-            </div>
-            <div class="col-3">
-                <img src="{% static 'images////category-3.jpg'%}">
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- Featured Products -->
 
@@ -29,7 +14,7 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
-                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star"></i>
             </div>
         </div>
         {% endfor %}
@@ -46,7 +31,7 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
-                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star"></i>
             </div>
         </div>
         {% endfor %}
@@ -58,14 +43,13 @@
     <div class="small-container">
         <div class="row">
             <div class="col-2">
-                <img src="{% static 'images///exclusive.png'%}" class="offer-img">
+                <img src="{% static 'images///smartt.png'%}" class="offer-img">
             </div>
             <div class="col-2">
-                <p>Exclusively Available on FAFA CART</p>
-                <h1>Smart Band 4</h1>
-                <small>The Mi Smart Band 4 fearures a 39.9%larger (than Mi Band 3) AMOLED color full-touch display
-                    with adjustable brightness, so everything is clear as can be.<br></small>
-                <a href="products.html" class="btn">Buy Now &#8594;</a>
+                <p class="offr">Exclusively Available On FAFA CART !!</p><br>
+                <h2 class="off">{{ offer_product.title }}</h2>
+                <small>{{ offer_product.description }}<br></small>
+                <a href="{% url 'detail_products' offer_product.pk %}" class="btn">Buy Now &#8594;</a>
             </div>
         </div>
     </div>
@@ -77,7 +61,7 @@
         <div class="row">
             <div class="col-3">
                 <i class="fa fa-quote-left"></i>
-                <p>Best collections,good quality ,Highly Reccomended.</p>
+                <p>"I recently bought a refrigerator from this site, and I'm extremely satisfied with the product. The energy efficiency is excellent, and it keeps my food fresh for longer. Delivery was fast and hassle-free."</p>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -90,7 +74,7 @@
             </div>
             <div class="col-3">
                 <i class="fa fa-quote-left"></i>
-                <p>Previously i used so many products from different leading online and offline markets,i highly reccomending FAFA CART for you.</p>
+                <p>"Top-notch products and excellent service! I got a vacuum cleaner, and it works like a charm. Very powerful and easy to use. I will definitely be coming back for more home appliances."</p>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -103,7 +87,7 @@
             </div>
             <div class="col-3">
                 <i class="fa fa-quote-left"></i>
-                <p>If you are a sports person,here this for you the best.</p>
+                <p>"I purchased a washing machine, and it has made my life so much easier. The machine is quiet, efficient, and has a variety of useful settings. The customer service was also very helpful when I had questions."</p>
                 <div class="rating">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>

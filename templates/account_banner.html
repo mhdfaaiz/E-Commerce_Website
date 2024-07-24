@@ -22,18 +22,17 @@
                     {% csrf_token %}
                     <input type="text" required name = "username" placeholder="Username">
                     <input type="password" required name = "password" placeholder="Password">
-                    <button type="submit" name = "login" class="btn">Login</button>
-                    <a href="">Forget Password</a>
+                    <button type="submit" name = "login" class="form_button">Login</button>
                 </form>
 
                 <form id="RegForm" method="post" enctype="multipart/form-data">
                     {% csrf_token %}
                     <input type="text" name = "username" required maxlength="10" minlength="5" placeholder="Username">
                     <input type="email" name = "email" required  placeholder="Email">
-                    <input type="password" name = "password" required  maxlength="10" minlength="4" placeholder="Password">
-                    <input type="text" name = "address" required  maxlength="10" minlength="4" placeholder="address" >
+                    <input type="password" name = "password" required minlength="4" placeholder="Password">
+                    <input type="text" name = "address" required minlength="4" placeholder="address" >
                     <input type="tel" name = "phone" required minlength ="10" maxlength = "10" placeholder="Phone">
-                    <button type="submit" class="btn" name = "register" >Register</button>
+                    <button type="submit" class="form_button" name = "register" >Register</button>
                 </form>
             </div>
         </div>

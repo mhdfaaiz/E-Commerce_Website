@@ -1,14 +1,18 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from . models import Product
 from django.core.paginator import Paginator
 
 # Create your views here.
 def index(request):
-    featured_product=Product.objects.order_by('priority')[:4]
+    featured_product=Product.objects.order_by('-priority')[:4]
     latest_product=Product.objects.order_by('-id')[:4]
+    
+    offer_product = get_object_or_404(Product, title='TESLA Smart Robot Vacuum Laser')
+    
     context={
         'featured_product':featured_product,
-        'latest_product':latest_product
+        'latest_product':latest_product,
+        'offer_product': offer_product
     }
     print(context)
     return render(request,'index.html',context)

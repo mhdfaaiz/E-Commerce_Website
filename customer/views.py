@@ -31,9 +31,9 @@ def account(request):
                 phone=phone,
                 address=address 
             )
-            messages.success(request,'user registration successfull')
+            messages.success(request,'User registration successfull')
         except Exception as e:
-            messages.error(request,'duplicate user credentials')
+            messages.error(request,'Duplicate user credentials')
     if request.POST and 'login' in request.POST:
         context['register']=False
         print(request.POST)
@@ -46,6 +46,6 @@ def account(request):
             login(request,user)
             return redirect('index')
         else:
-            messages.error(request,'invalid user credentials')
+            messages.error(request,'Invalid user credentials')
             
     return render(request,'account.html',context)

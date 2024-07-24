@@ -1,0 +1,28 @@
+{% load status %}
+{% load tz %}
+
+<div class="small-container cart-page">
+    {% if orders %}
+    <table>
+        <tbody><tr>
+            <th>Order ID</th>
+            <th>Product</th>
+            <th>Date</th>
+            <th>Total Price</th>
+            <th>Status</th>
+        </tr>
+        {% for order in orders %}
+        <tr>
+            <td>{{ order.id }}</td>
+            <td>{{ order.product_titles }}</td>
+            <td>{{ order.ordered_date|localtime }}</td>
+            <td>{{ order.total_price }}</td>
+            <td>{% status order.order_status %}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>"You don't have any orders yet."</p>
+    {% endif %}
+</div>

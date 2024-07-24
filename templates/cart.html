@@ -2,9 +2,12 @@
 
 {% block content %}
 {% if messages %}
+<div class="message-container">
     {% for message in messages %}
        <p class="{{ message.tags }}">{{ message }}</p>
+
     {%endfor%}
+</div>
 {% else %}
     {% include 'cart_container.html' %}
 {% endif %}
