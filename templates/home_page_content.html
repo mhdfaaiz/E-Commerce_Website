@@ -47,7 +47,7 @@
             </div>
             <div class="col-2">
                 <p class="offr">Exclusively Available On FAFA CART !!</p><br>
-                <h2 class="off">{{ offer_product.title }}</h2>
+                <h2 class="off">{{ offer_product.title|upper }}</h2>
                 <small>{{ offer_product.description }}<br></small>
                 <a href="{% url 'detail_products' offer_product.pk %}" class="btn">Buy Now &#8594;</a>
             </div>
